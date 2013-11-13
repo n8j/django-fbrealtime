@@ -12,17 +12,19 @@ django 1.4 or later
 Installation
 ============
 
-1. ''pip install django-fbrealtime''
+1. Install from pypi::
+
+    $ pip install django-fbrealtime
 
 2. Add 'fbrealtime' to your list of INSTALLED_APPS in settings.py
 
-3. Add FACEBOOK_API_SECRET FACEBOOK_VERIFY_TOKEN to settings.py
+3. Add FACEBOOK_API_SECRET and FACEBOOK_VERIFY_TOKEN to settings.py
 
 4. Add url(r'', include('fbrealtime.urls')), to URLConf
 
 Use
 ===
-Subscribe to fbrealtime.signals.data_imported signal
+Subscribe to fbrealtime.signals.data_imported signal::
 
     from django.dispatch import receiver
     import fbrealtime.signals.fb_update
